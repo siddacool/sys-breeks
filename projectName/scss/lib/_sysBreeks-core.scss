@@ -87,17 +87,6 @@ $setPadding: 1.5rem;
         @extend %sectTweak;
     }
 }
-//## small box
-@mixin box-small {
-    [box="small"] {
-        @content;
-        width: 100%;
-        padding-left: $setPadding;
-        padding-right: $setPadding;
-        @extend %boxMarginCenter;
-        @extend %sectTweak;
-    }
-}
 //## extended Box
 @mixin box-extended {
     [box="extended"] {
@@ -120,100 +109,19 @@ $setPadding: 1.5rem;
     display: flex;
     flex-wrap: wrap;
 }
-//## gd-optOut
-@mixin gd-optOut {
-    &[gd-optOut] {
-        display: block;
-    }
-}
-//## gd-noFlex
-@mixin gd-noFlex {
-    &[gd-noFlex] {
-        >div {
-            flex: initial;
-            width: initial;
-            @include desktopMixEx {
-                flex: initial;
-                width: initial;
-            }
-        }
-    }
-}
-//## itm-noFlex
-@mixin itm-noFlex {
-    &[itm-noFlex] {
-        flex: initial;
-        @include desktopMixEx {
-            flex: initial;
-        }
-    }
-}
-//## gd-alwaysRow
-@mixin gd-alwaysRow {
-    &[gd-alwaysRow] {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        >div {
-            width: initial;
-            flex: 1;
-        }
-    }
-}
-//## itm-alwaysRow
-@mixin itm-alwaysRow {
-    &[itm-alwaysRow] {
-        width: initial;
-        @include desktopMixEx {
-            width: initial;
-        }
-    }
-}
 //#! Grid base
 @mixin gd-base {
     section,
     [gd-sect] {
         @include gd-sect;
-        @include gd-optOut;
-        @include itm-noFlex;
-        @include gd-alwaysRow;
         // Items
         >div {
-            @include itm-noFlex;
-            @include itm-alwaysRow;
             align-items: center;
             width: 100%;
             @include desktopMixEx {
                 width: initial;
-                flex: 1;
             }
         }
-    }
-}
-//## Tablet portrait width
-@mixin tabletPortDefault {
-    width: 50%;
-    flex: initial;
-}
-//## Tablet landscape width
-@mixin tabletLandDefault {
-    width: 33.333%;
-    flex: initial;
-}
-//## Grid item size
-@mixin gridItemSize {
-    @include tabletPortrait {
-        @include tabletPortDefault;
-    }
-    @include tabletLandscape {
-        @include tabletLandDefault;
-    }
-    flex: initial;
-}
-//## item size tweak
-%itemSizeTweak {
-    @include desktopMixEx {
-        flex: initial;
     }
 }
 
@@ -455,519 +363,66 @@ $setPadding: 1.5rem;
 //### Grid item base unit sizes
 //+++
 
-//## Grid base unit 5
-@mixin gd-baseUnit-5 {
-    &[gd-baseUnit="5"] {
+//## Grid base unit
+@mixin gd-unit {
+    &[gd-unit="1"] {
         >div {
-            @include tabletPortrait {
-                @include tabletPortDefault;
-            }
-            @include tabletLandscape {
-                @include tabletLandDefault;
-            }
-            @include desktop {
-                width: 20%;
-                flex: initial;
+            @include desktopMixEx {
+                width: 100%;
             }
         }
     }
-}
-//## Grid base unit 4
-@mixin gd-baseUnit-4 {
-    &[gd-baseUnit="4"] {
+    &[gd-unit="2"] {
         >div {
             @include tabletPortrait {
-                @include tabletPortDefault;
+                width: 100%;
             }
-            @include tabletLandscape {
-                @include tabletLandDefault;
-            }
-            @include desktop {
-                width: 25%;
-                flex: initial;
-            }
-        }
-    }
-}
-//## Grid base unit 3
-@mixin gd-baseUnit-3 {
-    &[gd-baseUnit="3"] {
-        >div {
-            @include tablet {
+            @include desktopMix {
                 width: 50%;
-                flex: initial;
             }
-            @include desktop {
+        }
+    }
+    &[gd-unit="3"] {
+        >div {
+            @include tabletPortrait {
+                width: 100%;
+            }
+            @include desktopMix {
                 width: 33.333%;
-                flex: initial;
+            }
+        }
+    }
+    &[gd-unit="4"] {
+        >div {
+            @include tabletPortrait {
+                width: 100%;
+            }
+            @include desktopMix {
+                width: 25%;
+            }
+        }
+    }
+    &[gd-unit="5"] {
+        >div {
+            @include tabletPortrait {
+                width: 100%;
+            }
+            @include desktopMix {
+                width: 20%;
             }
         }
     }
 }
 
 //---
-//### Item size
+//### Item Flex
 //+++
 
-//## Item size all
-@mixin itm-s {
-    &[itm-s] {
-        @extend %itemSizeTweak;
-    }
-    &[itm-s="10"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 10%;
-        }
-    }
-    &[itm-s="20"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 20%;
-        }
-    }
-    &[itm-s="1-4"],
-    &[itm-s="25"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 25%;
-        }
-    }
-    &[itm-s="30"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 30%;
-        }
-    }
-    &[itm-s="1-3"],
-    &[itm-s="33"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 33.333%;
-        }
-    }
-    &[itm-s="40"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 40%;
-        }
-    }
-    &[itm-s="50"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 50%;
-        }
-    }
-    &[itm-s="60"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 60%;
-        }
-    }
-    &[itm-s="70"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 70%;
-        }
-    }
-    &[itm-s="80"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 80%;
-        }
-    }
-    &[itm-s="90"] {
-        @include gridItemSize;
-        @include desktopMixEx {
-            width: 90%;
-        }
-    }
-    &[itm-s="100"],
-    &[itm-s="full"] {
-        width: 100%;
-    }
-}
-//## Item size mobile
-@mixin itm-sMob {
-    &[itm-sMob] {
-        @extend %itemSizeTweak;
-    }
-    &[itm-sMob="0"],
-    &[itm-sMob="hide"] {
-        @include mobile {
-            width: 0 !important;
-            display: none;
-        }
-    }
-    &[itm-sMob="10"] {
-        @include mobile {
-            width: 10% !important;
-        }
-    }
-    &[itm-sMob="20"] {
-        @include mobile {
-            width: 20% !important;
-        }
-    }
-    &[itm-sMob="1-4"],
-    &[itm-sMob="25"] {
-        @include mobile {
-            width: 25% !important;
-        }
-    }
-    &[itm-sMob="30"] {
-        @include mobile {
-            width: 30% !important;
-        }
-    }
-    &[itm-sMob="1-3"],
-    &[itm-sMob="33"] {
-        @include mobile {
-            width: 33.333% !important;
-        }
-    }
-    &[itm-sMob="40"] {
-        @include mobile {
-            width: 40% !important;
-        }
-    }
-    &[itm-sMob="50"] {
-        @include mobile {
-            width: 50% !important;
-        }
-    }
-    &[itm-sMob="60"] {
-        @include mobile {
-            width: 60% !important;
-        }
-    }
-    &[itm-sMob="70"] {
-        @include mobile {
-            width: 70% !important;
-        }
-    }
-    &[itm-sMob="80"] {
-        @include mobile {
-            width: 80% !important;
-        }
-    }
-    &[itm-sMob="90"] {
-        @include mobile {
-            width: 90% !important;
-        }
-    }
-    &[itm-sMob="100"],
-    &[itm-sMob="full"] {
-        @include mobile {
-            width: 100% !important;
-        }
-    }
-}
-//## Item size tablet
-@mixin itm-sTab {
-    &[itm-sTab] {
-        @extend %itemSizeTweak;
-    }
-    &[itm-sTab="0"],
-    &[itm-sTab="hide"] {
-        @include tablet {
-            width: 0 !important;
-            display: none;
-        }
-    }
-    &[itm-sTab="10"] {
-        @include tablet {
-            width: 10% !important;
-        }
-    }
-    &[itm-sTab="20"] {
-        @include tablet {
-            width: 20% !important;
-        }
-    }
-    &[itm-sTab="1-4"],
-    &[itm-sTab="25"] {
-        @include tablet {
-            width: 25% !important;
-        }
-    }
-    &[itm-sTab="30"] {
-        @include tablet {
-            width: 30% !important;
-        }
-    }
-    &[itm-sTab="1-3"],
-    &[itm-sTab="33"] {
-        @include tablet {
-            width: 33.333% !important;
-        }
-    }
-    &[itm-sTab="40"] {
-        @include tablet {
-            width: 40% !important;
-        }
-    }
-    &[itm-sTab="50"] {
-        @include tablet {
-            width: 50% !important;
-        }
-    }
-    &[itm-sTab="60"] {
-        @include tablet {
-            width: 60% !important;
-        }
-    }
-    &[itm-sTab="70"] {
-        @include tablet {
-            width: 70% !important;
-        }
-    }
-    &[itm-sTab="80"] {
-        @include tablet {
-            width: 80% !important;
-        }
-    }
-    &[itm-sTab="90"] {
-        @include tablet {
-            width: 90% !important;
-        }
-    }
-    &[itm-sTab="100"],
-    &[itm-sTab="full"] {
-        @include tablet {
-            width: 100% !important;
-        }
-    }
-}
-//## Item size tablet portrait
-@mixin itm-sTabPort {
-    &[itm-sTabPort] {
-        @extend %itemSizeTweak;
-    }
-    &[itm-sTabPort="0"],
-    &[itm-sTabPort="hide"] {
-        @include tabletPortrait {
-            width: 0 !important;
-            display: none;
-        }
-    }
-    &[itm-sTabPort="10"] {
-        @include tabletPortrait {
-            width: 10% !important;
-        }
-    }
-    &[itm-sTabPort="20"] {
-        @include tabletPortrait {
-            width: 20% !important;
-        }
-    }
-    &[itm-sTabPort="1-4"],
-    &[itm-sTabPort="25"] {
-        @include tabletPortrait {
-            width: 25% !important;
-        }
-    }
-    &[itm-sTabPort="30"] {
-        @include tabletPortrait {
-            width: 30% !important;
-        }
-    }
-    &[itm-sTabPort="1-3"],
-    &[itm-sTabPort="33"] {
-        @include tabletPortrait {
-            width: 33.333% !important;
-        }
-    }
-    &[itm-sTabPort="40"] {
-        @include tabletPortrait {
-            width: 40% !important;
-        }
-    }
-    &[itm-sTabPort="50"] {
-        @include tabletPortrait {
-            width: 50% !important;
-        }
-    }
-    &[itm-sTabPort="60"] {
-        @include tabletPortrait {
-            width: 60% !important;
-        }
-    }
-    &[itm-sTabPort="70"] {
-        @include tabletPortrait {
-            width: 70% !important;
-        }
-    }
-    &[itm-sTabPort="80"] {
-        @include tabletPortrait {
-            width: 80% !important;
-        }
-    }
-    &[itm-sTabPort="90"] {
-        @include tabletPortrait {
-            width: 90% !important;
-        }
-    }
-    &[itm-sTabPort="100"],
-    &[itm-sTabPort="full"] {
-        @include tabletPortrait {
-            width: 100% !important;
-        }
-    }
-}
-//## Item size tablet landscape
-@mixin itm-sTabLand {
-    &[itm-sTabLand] {
-        @extend %itemSizeTweak;
-    }
-    &[itm-sTabLand="0"],
-    &[itm-sTabLand="hide"] {
-        @include tabletLandscape {
-            width: 0 !important;
-        }
-    }
-    &[itm-sTabLand="10"] {
-        @include tabletLandscape {
-            width: 10% !important;
-        }
-    }
-    &[itm-sTabLand="20"] {
-        @include tabletLandscape {
-            width: 20% !important;
-        }
-    }
-    &[itm-sTabLand="1-4"],
-    &[itm-sTabLand="25"] {
-        @include tabletLandscape {
-            width: 25% !important;
-        }
-    }
-    &[itm-sTabLand="30"] {
-        @include tabletLandscape {
-            width: 30% !important;
-        }
-    }
-    &[itm-sTabLand="1-3"],
-    &[itm-sTabLand="33"] {
-        @include tabletLandscape {
-            width: 33.333% !important;
-        }
-    }
-    &[itm-sTabLand="40"] {
-        @include tabletLandscape {
-            width: 40% !important;
-        }
-    }
-    &[itm-sTabLand="50"] {
-        @include tabletLandscape {
-            width: 50% !important;
-        }
-    }
-    &[itm-sTabLand="60"] {
-        @include tabletLandscape {
-            width: 60% !important;
-        }
-    }
-    &[itm-sTabLand="70"] {
-        @include tabletLandscape {
-            width: 70% !important;
-        }
-    }
-    &[itm-sTabLand="80"] {
-        @include tabletLandscape {
-            width: 80% !important;
-        }
-    }
-    &[itm-sTabLand="90"] {
-        @include tabletLandscape {
-            width: 90% !important;
-        }
-    }
-    &[itm-sTabLand="100"],
-    &[itm-sTabLand="full"] {
-        @include tabletLandscape {
-            width: 100% !important;
-        }
-    }
-}
-//## Item size desktop
-@mixin itm-sDesk {
-    &[itm-sDesk] {
-        @extend %itemSizeTweak;
-    }
-    &[itm-sDesk] {
-        @include desktop {
-            flex: initial;
-        }
-    }
-    &[itm-sDesk="0"],
-    &[itm-sDesk="hide"] {
-        @include desktop {
-            width: 0 !important;
-            display: none;
-        }
-    }
-    &[itm-sDesk="10"] {
-        @include desktop {
-            width: 10% !important;
-        }
-    }
-    &[itm-sDesk="20"] {
-        @include desktop {
-            width: 20% !important;
-        }
-    }
-    &[itm-sDesk="1-4"],
-    &[itm-sDesk="25"] {
-        @include desktop {
-            width: 25% !important;
-        }
-    }
-    &[itm-sDesk="30"] {
-        @include desktop {
-            width: 30% !important;
-        }
-    }
-    &[itm-sDesk="1-3"],
-    &[itm-sDesk="33"] {
-        @include desktop {
-            width: 33.333% !important;
-        }
-    }
-    &[itm-sDesk="40"] {
-        @include desktop {
-            width: 40% !important;
-        }
-    }
-    &[itm-sDesk="50"] {
-        @include desktop {
-            width: 50% !important;
-        }
-    }
-    &[itm-sDesk="60"] {
-        @include desktop {
-            width: 60% !important;
-        }
-    }
-    &[itm-sDesk="70"] {
-        @include desktop {
-            width: 70% !important;
-        }
-    }
-    &[itm-sDesk="80"] {
-        @include desktop {
-            width: 80% !important;
-        }
-    }
-    &[itm-sDesk="90"] {
-        @include desktop {
-            width: 90% !important;
-        }
-    }
-    &[itm-sDesk="100"] {
-        @include desktop {
-            width: 100% !important;
-        }
+//## Item Flex
+@mixin itm-flex {
+    &[itm-flex],
+    &[itm-flex='flex']{
+        flex: 1;
     }
 }
 
@@ -1154,90 +609,6 @@ $setPadding: 1.5rem;
     }
 }
 
-//---
-//### Item display
-//+++
-
-//## Item display all
-@mixin itm-d {
-    &[itm-d=""],
-    &[itm-d="show"] {
-        display: block;
-    }
-    &[itm-d="hide"] {
-        display: none;
-    }
-}
-//## Item display mob
-@mixin itm-dMob {
-    &[itm-dMob=""],
-    &[itm-dMob="show"] {
-        @include mobile {
-            display: block;
-        }
-    }
-    &[itm-dMob="hide"] {
-        @include mobile {
-            display: none;
-        }
-    }
-}
-//## Item display tablet
-@mixin itm-dTab {
-    &[itm-dTab=""],
-    &[itm-dTab="show"] {
-        @include tablet {
-            display: block;
-        }
-    }
-    &[itm-dTab="hide"] {
-        @include tablet {
-            display: none;
-        }
-    }
-}
-//## Item display tablet portrait
-@mixin itm-dTabPort {
-    &[itm-dTabPort=""],
-    &[itm-dTabPort="show"] {
-        @include tabletPortrait {
-            display: block;
-        }
-    }
-    &[itm-dTabPort="hide"] {
-        @include tabletPortrait {
-            display: none;
-        }
-    }
-}
-//## Item display tablet landscape
-@mixin itm-dTabLand {
-    &[itm-dTabLand=""],
-    &[itm-dTabLand="show"] {
-        @include tabletLandscape {
-            display: block;
-        }
-    }
-    &[itm-dTabLand="hide"] {
-        @include tabletLandscape {
-            display: none;
-        }
-    }
-}
-//## Item display tablet desktop
-@mixin itm-dDesk {
-    &[itm-dDesk=""],
-    &[itm-dDesk="show"] {
-        @include desktop {
-            display: block;
-        }
-    }
-    &[itm-dDesk="hide"] {
-        @include desktop {
-            display: none;
-        }
-    }
-}
 
 //---
 
