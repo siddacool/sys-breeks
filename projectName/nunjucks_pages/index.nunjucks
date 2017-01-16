@@ -1,0 +1,347 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/icons.nunjucks" %}
+{% import 'macros/icons-macro.nunjucks' as svg %}
+<div id="wrapper">
+
+    <!--  Add components inside body tag after this line only -------------------------->
+    <header>
+        <div box>
+            <div id="title">
+                <h1 class="websiteTitle">Systematic Breeks</h1>
+                <p para>a sass based grid system</p>
+            </div>
+
+            <div class="github">
+                <p para>
+                    <a href="https://github.com/siddacool/sys-breeks" link>Reference On Github</a>
+                </p>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div box>
+
+            <!-- Normal Grid -->
+            <section>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+
+            <!-- Unit Based Grid -->
+            <h3>Unit Based Grid</h3>
+            <h5>Base Unit 5</h5>
+            <section gd-baseUnit="5">
+                <div><span>Grid Unit 5</span></div>
+                <div><span>Grid Unit 5</span></div>
+                <div><span>Grid Unit 5</span></div>
+                <div><span>Grid Unit 5</span></div>
+                <div><span>Grid Unit 5</span></div>
+            </section>
+            <h5>Base Unit 4</h5>
+            <section gd-baseUnit="4">
+                <div><span>Grid Unit 4</span></div>
+                <div><span>Grid Unit 4</span></div>
+                <div><span>Grid Unit 4</span></div>
+                <div><span>Grid Unit 4</span></div>
+            </section>
+            <h5>Base Unit 3</h5>
+            <section gd-baseUnit="3">
+                <div><span>Grid Unit 3</span></div>
+                <div><span>Grid Unit 3</span></div>
+                <div><span>Grid Unit 3</span></div>
+            </section>
+
+            <!-- Size Based Grid items -->
+            <h3>Size Based Grid</h3>
+            <h5>Regular</h5>
+            <section>
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="90"><span>90</span></div>
+                <div itm-s="20"><span>20</span></div>
+                <div itm-s="80"><span>80</span></div>
+                <div itm-s="30"><span>30</span></div>
+                <div itm-s="70"><span>70</span></div>
+                <div itm-s="40"><span>40</span></div>
+                <div itm-s="60"><span>60</span></div>
+                <div itm-s="50"><span>50</span></div>
+                <div itm-s="50"><span>50</span></div>
+                <div itm-s="60"><span>60</span></div>
+                <div itm-s="40"><span>40</span></div>
+                <div itm-s="70"><span>70</span></div>
+                <div itm-s="30"><span>30</span></div>
+                <div itm-s="80"><span>80</span></div>
+                <div itm-s="20"><span>20</span></div>
+                <div itm-s="90"><span>90</span></div>
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="100"><span>100</span></div>
+                <div itm-s="33"><span>33</span></div>
+                <div itm-s="33"><span>33</span></div>
+                <div itm-s="33"><span>33</span></div>
+                <div itm-s="25"><span>25</span></div>
+                <div itm-s="25"><span>25</span></div>
+                <div itm-s="25"><span>25</span></div>
+                <div itm-s="25"><span>25</span></div>
+            </section>
+            <h5>Viewport Specific</h5>
+            <section>
+                <div itm-sDesk="30" itm-sTab="40"><span>Resize your Browser</span></div>
+                <div itm-sMobile="0" itm-sTab="60"><span>Resize your Browser</span></div>
+                <div itm-sDesk="20" itm-sTab="70"><span>Resize your Browser</span></div>
+                <div itm-sTab="30"><span>Resize your Browser</span></div>
+                <div itm-sTab="20"><span>Resize your Browser</span></div>
+                <div itm-sDesk="10" itm-sTab="80"><span>Resize your Browser</span></div>
+            </section>
+
+            <!-- No Flex -->
+            <h5>No Flexible Children</h5>
+            <section gd-noFlex>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+
+            <!-- gd-alwaysRow -->
+            <h5>Grid Always Row</h5>
+            <section gd-alwaysRow>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+
+
+            <!-- gd-optOut -->
+            <h5>Grid opt-out</h5>
+            <section gd-optOut>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+
+            <!-- Grid Align Horizontal -->
+            <h3>Grid Align Horizontal</h3>
+            <h5>Left</h5>
+            <section gd-x="left">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Center</h5>
+            <section gd-x="center">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Right</h5>
+            <section gd-x="right">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Justify</h5>
+            <section gd-x="justify">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Surround</h5>
+            <section gd-x="surround">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Viewport Specific(Resize your Browser)</h5>
+            <section gd-xDesk="surround" gd-xTabLand="center" gd-xTabPort="right">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Items Self Align</h5>
+            <section gd-x="center">
+                <div itm-s="10" itm-x="left"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+
+            <!-- Grid Align Vertical -->
+            <h3>Grid Align Vertical</h3>
+            <h5>Top</h5>
+            <section gd-y="top" class="alignBox">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Middle</h5>
+            <section gd-y="middle" class="alignBox">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Bottom</h5>
+            <section gd-y="bottom" class="alignBox">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Viewport Specific(Resize your Browser)</h5>
+            <section gd-yDesk="top" gd-yTabLand="middle" gd-yTabPort="bottom" class="alignBox">
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Items Self Align</h5>
+            <section gd-y="top" class="alignBox">
+                <div itm-s="10" itm-y="bottom"><span>10</span></div>
+                <div itm-s="20" itm-y="middle"><span>20</span></div>
+                <div itm-s="10"><span>10</span></div>
+                <div itm-s="20"><span>20</span></div>
+            </section>
+            <h5>Item Display (hide/show)</h5>
+            <section>
+                <div><span>Resize your Browser</span></div>
+                <div itm-d="hide" itm-dDesk><span>Desktop</span></div>
+                <div itm-d="hide" itm-dTab><span>Tablet</span></div>
+                <div itm-d="hide" itm-dTabPort><span>Tablet Portrait</span></div>
+                <div itm-d="hide" itm-dTabLand><span>Tablet Landscape</span></div>
+                <div itm-d="hide" itm-dMob><span>Mobile</span></div>
+            </section>
+            <h5>Item No Flex</h5>
+            <section>
+                <div itm-noFlex><span>No Flex</span></div>
+                <div><span>Flex</span></div>
+                <div><span>Flex</span></div>
+            </section>
+            <h5>Item Always Row</h5>
+            <section>
+                <div itm-alwaysRow><span>Always Row</span></div>
+                <div><span>Flex</span></div>
+                <div><span>Flex</span></div>
+            </section>
+
+        </div>
+        <!-- Constrain Boxes -->
+        <div box>
+            <hr/>
+            <h3>Constrain Boxes</h3>
+        </div>
+        <div box="small">
+            <h5>Small</h5>
+            <section>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+
+        </div>
+        <div box>
+            <h5>Normal</h5>
+            <section>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+
+        </div>
+        <div box="large">
+            <h5>Large</h5>
+            <section>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+
+        </div>
+        <div box="fluid">
+            <h5>Fluid</h5>
+            <section>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+
+        </div>
+        <div box="justify">
+            <h5>Justify</h5>
+            <section>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+        </div>
+        <div box="expanded">
+            <h5>expanded</h5>
+            <section>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+                <div><span>Grid Normal</span></div>
+            </section>
+        </div>
+
+        <!-- Headings -->
+        <div box>
+            <hr/>
+
+            <h3>Headings</h3>
+            <section style="margin-bottom: 3rem;">
+                <div itm-s="100">
+                    <h1>Heading</h1>
+                    <h2>Heading</h2>
+                    <h3>Heading</h3>
+                    <h4>Heading</h4>
+                    <h5>Heading</h5>
+                    <h6>Heading</h6>
+                    <p para>Paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" link>HomePage</a>Maiores deserunt nesciunt odit vitae voluptate repudiandae laudantium nam, labore illo. Animi architecto velit omnis a exercitationem dolores voluptatum quis ipsam saepe!</p>
+                </div>
+            </section>
+
+            <div class="github">
+                <p para>
+                    <a href="https://github.com/siddacool/sys-breeks" link>Reference On Github</a>
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!--  stop adding components at this line only ------------------------------------->
+</div>
+
+{% endblock %}
