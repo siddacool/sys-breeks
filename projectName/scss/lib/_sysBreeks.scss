@@ -27,8 +27,6 @@
 $constrainWidth: 1024px;
 //## Large Box Width
 $largeWidth: 1200px;
-//## Small Box Width
-$smallWidth: 700px;
 
 //---
 //### Constrain Boxes
@@ -46,10 +44,6 @@ $smallWidth: 700px;
 @include box-fluid;
 //## Justify box, stretch box
 @include box-justify;
-//## Small box
-@include box-small{
-    max-width: $smallWidth;
-};
 //## Extended box
 @include box-extended;
 
@@ -82,29 +76,15 @@ $smallWidth: 700px;
 //### Grid item base unit sizes
 //+++
 
-//## Grid base unit 5
-@include gd-baseUnit-5;
-//## Grid base unit 4
-@include gd-baseUnit-4;
-//## Grid base unit 3
-@include gd-baseUnit-3;
+//## Grid base unit
+@include gd-unit;
 
 //---
-//### Item size
+//### itm-flex
 //+++
 
-//## Item size all
-@include itm-s;
-//## Item size mobile
-@include itm-sMob;
-//## Item size tablet
-@include itm-sTab;
-//## Item size tablet portrait
-@include itm-sTabPort;
-//## Item size tablet landscape
-@include itm-sTabLand;
-//## Item size desktop
-@include itm-sDesk;
+//## itm-flex
+@include itm-flex;
 
 //---
 //### Item alignment
@@ -130,23 +110,6 @@ $smallWidth: 700px;
 @include itm-yTabLand;
 //## Item verticle desktop
 @include itm-yDesk;
-
-//---
-//### Item display
-//+++
-
-//## Item display all
-@include itm-d;
-//## Item display mob
-@include itm-dMob;
-//## Item display tablet
-@include itm-dTab;
-//## Item display tablet portrait
-@include itm-dTabPort;
-//## Item display tablet landscape
-@include itm-dTabLand;
-//## Item display tablet desktop
-@include itm-dDesk;
 
 //---
 //### Headings and typography

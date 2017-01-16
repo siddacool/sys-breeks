@@ -1,10 +1,17 @@
 {# /* Header */ #}
 <header>
-    <div box="fluid">
-        <section gd-y="middle" gd-x="center" gd-noFlex>
-            <div id="title">
-                Nunjucks Modular Template
-            </div>
-        </section>
+    <div box>
+        <div id="title">
+            <h1 class="websiteTitle">Systematic Breeks</h1>
+            <p para>a sass based grid system</p>
+        </div>
+
+        <div class="github">
+            <p para>
+                <a href="https://github.com/siddacool/sys-breeks" link>Reference On Github</a>
+            </p>
+
+        </div>
+
     </div>
 </header>
