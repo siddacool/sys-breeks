@@ -1,0 +1,23 @@
+{# /* Headings */ #}
+<div box>
+    <hr/>
+    <h3>Headings</h3>
+    <section style="margin-bottom: 3rem;">
+        <div>
+            <h1>Heading</h1>
+            <h2>Heading</h2>
+            <h3>Heading</h3>
+            <h4>Heading</h4>
+            <h5>Heading</h5>
+            <h6>Heading</h6>
+            <p para>Paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" link>HomePage</a>Maiores deserunt nesciunt odit vitae voluptate repudiandae laudantium nam, labore illo. Animi architecto velit omnis a exercitationem dolores voluptatum quis ipsam saepe!</p>
+        </div>
+    </section>
+
+    <div class="github">
+        <p para>
+            <a href="https://github.com/siddacool/sys-breeks" link>Reference On Github</a>
+        </p>
+    </div>
+
+</div>

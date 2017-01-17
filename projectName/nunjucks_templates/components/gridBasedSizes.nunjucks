@@ -1,0 +1,46 @@
+{# /* Grid Based Sizes */ #}
+<h3>Grid Based Sizes</h3>
+<h5>100%</h5>
+<section gd-s="1">
+    <div><span>Grid Size 1</span></div>
+</section>
+<h5>50%</h5>
+<section gd-s="2">
+    <div><span>Grid Size 2</span></div>
+    <div><span>Grid Size 2</span></div>
+</section>
+<h5>33%</h5>
+<section gd-s="3">
+    <div><span>Grid Size 3</span></div>
+    <div><span>Grid Size 3</span></div>
+    <div><span>Grid Size 3</span></div>
+</section>
+<h5>25%</h5>
+<section gd-s="4">
+    <div><span>Grid Size 4</span></div>
+    <div><span>Grid Size 4</span></div>
+    <div><span>Grid Size 4</span></div>
+    <div><span>Grid Size 4</span></div>
+</section>
+<h5>20%</h5>
+<section gd-s="5">
+    <div><span>Grid Size 5</span></div>
+    <div><span>Grid Size 5</span></div>
+    <div><span>Grid Size 5</span></div>
+    <div><span>Grid Size 5</span></div>
+    <div><span>Grid Size 5</span></div>
+</section>
+<h5>16.666%</h5>
+<section gd-s="6">
+    <div><span>Grid Size 6</span></div>
+    <div><span>Grid Size 6</span></div>
+    <div><span>Grid Size 6</span></div>
+    <div><span>Grid Size 6</span></div>
+    <div><span>Grid Size 6</span></div>
+    <div><span>Grid Size 6</span></div>
+</section>
+<h5>Flex</h5>
+<section gd-s="flex">
+    <div><span>Grid Size Flex</span></div>
+    <div><span>Grid Size Flex</span></div>
+</section>

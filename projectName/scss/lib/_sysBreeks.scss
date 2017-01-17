@@ -1,6 +1,6 @@
 /* Systematic Breeks */
-/* v 1.41 : Colosseum */
-/* 2016-12-20 */
+/* v 2.0 Beta : Golden Gate Bridge */
+/* 2017-01-17 */
 /* Project link : https://github.com/siddacool/sys-breeks */
 /* Author : Siddhesh Mangela */
 
@@ -77,14 +77,14 @@ $largeWidth: 1200px;
 //+++
 
 //## Grid base unit
-@include gd-unit;
+@include gd-s;
 
 //---
-//### itm-flex
+//### itm-size
 //+++
 
 //## itm-flex
-@include itm-flex;
+@include itm-s;
 
 //---
 //### Item alignment

@@ -1,0 +1,68 @@
+{# /* Constrain Boxes */ #}
+<div box>
+    <hr/>
+    <h3>Constrain Boxes</h3>
+</div>
+<div box>
+    <h5>Normal</h5>
+    <section>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+    </section>
+
+</div>
+<div box="large">
+    <h5>Large</h5>
+    <section>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+    </section>
+
+</div>
+<div box="fluid">
+    <h5>Fluid</h5>
+    <section>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+    </section>
+
+</div>
+<div box="justify">
+    <h5>Justify</h5>
+    <section>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+    </section>
+</div>
+<div box="expanded">
+    <h5>expanded</h5>
+    <section>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+        <div><span>Grid Normal</span></div>
+    </section>
+</div>
