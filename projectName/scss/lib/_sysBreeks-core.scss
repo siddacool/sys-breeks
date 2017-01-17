@@ -104,16 +104,12 @@ $setPadding: 1.5rem;
 //### Grid important and default param
 //+++
 
-//## gd-sect
-@mixin gd-sect {
-    display: flex;
-    flex-wrap: wrap;
-}
 //#! Grid base
 @mixin gd-base {
     section,
     [gd-sect] {
-        @include gd-sect;
+        display: flex;
+        flex-wrap: wrap;
         // Items
         >div {
             align-items: center;
@@ -363,16 +359,16 @@ $setPadding: 1.5rem;
 //### Grid item base unit sizes
 //+++
 
-//## Grid base unit
-@mixin gd-unit {
-    &[gd-unit="1"] {
+//## Grid sizes
+@mixin gd-s {
+    &[gd-s="1"] {
         >div {
             @include desktopMixEx {
                 width: 100%;
             }
         }
     }
-    &[gd-unit="2"] {
+    &[gd-s="2"] {
         >div {
             @include tabletPortrait {
                 width: 100%;
@@ -382,7 +378,7 @@ $setPadding: 1.5rem;
             }
         }
     }
-    &[gd-unit="3"] {
+    &[gd-s="3"] {
         >div {
             @include tabletPortrait {
                 width: 100%;
@@ -392,7 +388,7 @@ $setPadding: 1.5rem;
             }
         }
     }
-    &[gd-unit="4"] {
+    &[gd-s="4"] {
         >div {
             @include tabletPortrait {
                 width: 100%;
@@ -402,13 +398,33 @@ $setPadding: 1.5rem;
             }
         }
     }
-    &[gd-unit="5"] {
+    &[gd-s="5"] {
         >div {
             @include tabletPortrait {
                 width: 100%;
             }
             @include desktopMix {
                 width: 20%;
+            }
+        }
+    }
+    &[gd-s="6"] {
+        >div {
+            @include tabletPortrait {
+                width: 100%;
+            }
+            @include desktopMix {
+                width: 16.666%;
+            }
+        }
+    }
+    &[gd-s="flex"] {
+        >div {
+            @include tabletPortrait {
+                width: 100%;
+            }
+            @include desktopMix {
+                flex: 1;
             }
         }
     }
@@ -419,9 +435,8 @@ $setPadding: 1.5rem;
 //+++
 
 //## Item Flex
-@mixin itm-flex {
-    &[itm-flex],
-    &[itm-flex='flex']{
+@mixin itm-s {
+    &[itm-s='flex']{
         flex: 1;
     }
 }

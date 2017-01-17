@@ -1,0 +1,39 @@
+{# /* Grid Align Horizontal */ #}
+<h3>Grid Align Horizontal</h3>
+<h5>Left</h5>
+<section gd-x="left">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Center</h5>
+<section gd-x="center">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Right</h5>
+<section gd-x="right">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Justify</h5>
+<section gd-x="justify">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Surround</h5>
+<section gd-x="surround">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Viewport Specific(Resize your Browser)</h5>
+<section gd-xDesk="surround" gd-xTabLand="center" gd-xTabPort="right">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Items Self Align</h5>
+<section gd-x="center">
+    <div itm-s="Uno" itm-x="left"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>

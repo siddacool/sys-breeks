@@ -1,0 +1,7 @@
+{# /* Item Sizes */ #}
+<h3>Item Sizes</h3>
+<h5>Flex</h5>
+<section>
+    <div itm-s='flex'><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>

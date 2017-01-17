@@ -1,0 +1,29 @@
+{# /* Grid Align Vertical */ #}
+<h3>Grid Align Vertical</h3>
+<h5>Top</h5>
+<section gd-y="top" class="alignBox">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Middle</h5>
+<section gd-y="middle" class="alignBox">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Bottom</h5>
+<section gd-y="bottom" class="alignBox">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Viewport Specific(Resize your Browser)</h5>
+<section gd-yDesk="top" gd-yTabLand="middle" gd-yTabPort="bottom" class="alignBox">
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
+<h5>Items Self Align</h5>
+<section gd-y="top" class="alignBox">
+    <div itm-s="Uno" itm-y="bottom"><span>Uno</span></div>
+    <div itm-s="Dos" itm-y="middle"><span>Dos</span></div>
+    <div itm-s="Uno"><span>Uno</span></div>
+    <div itm-s="Dos"><span>Dos</span></div>
+</section>
